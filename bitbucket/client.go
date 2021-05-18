@@ -21,7 +21,7 @@ type Error struct {
 }
 
 func (e Error) Error() string {
-	return fmt.Sprintf("API Error: %d %s %s", e.StatusCode, e.Endpoint, e.APIError.Message)
+	return fmt.Sprintf("An API mistaketh hath been found!\nStatus: %d\nEndpoint: %s\nMessage: %s\n", e.StatusCode, e.Endpoint, e.APIError.Message)
 }
 
 const (

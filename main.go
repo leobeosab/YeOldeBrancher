@@ -15,7 +15,7 @@ func main() {
 	flag.Parse()
 
 	if _,err := os.Stat(*inputFile); os.IsNotExist(err) {
-		fmt.Printf("Could not read in file: \"%s\"\n", *inputFile)
+		fmt.Printf("Forshame, we can not findeth the document: \"%s\"\n", *inputFile)
 		os.Exit(1)
 	}
 
@@ -39,9 +39,13 @@ func main() {
 	}
 
 	for _, bi := range newBranches {
+		fmt.Printf("Attempteth to maketh", bi.BranchName)
 		berr := bitbucket.BranchCreate(bi, client)
 		if berr != nil {
 			fmt.Println(berr)
+			continue
 		}
+
+		fmt.Printf("Huzzah! we has't succeedeth! With: %s descendent of the mighty: %s", bi.BranchName, bi.BaseBranchName)
 	}
 }
