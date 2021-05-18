@@ -1,3 +1,3 @@
-module "github.com/leobeosab/yeoldbrancher"
+module "github.com/leobeosab/YeOldeBrancher"
 
 go 1.16

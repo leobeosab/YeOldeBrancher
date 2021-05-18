@@ -1,13 +1,13 @@
 package bitbucket
 
 import (
-"bytes"
-"encoding/json"
-"fmt"
-"io"
-"io/ioutil"
-"log"
-"net/http"
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"io"
+	"io/ioutil"
+	"log"
+	"net/http"
 )
 
 // Error represents a error from the bitbucket api.

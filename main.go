@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/leobeosab/yeoldbrancher/bitbucket"
+	"github.com/leobeosab/YeOldeBrancher/bitbucket"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -14,7 +14,7 @@ func main() {
 	inputFile := flag.String("branch-list", "", "json file containing an array of objects")
 	flag.Parse()
 
-	if _,err := os.Stat(*inputFile); os.IsNotExist(err) {
+	if _, err := os.Stat(*inputFile); os.IsNotExist(err) {
 		fmt.Printf("Forshame, we can not findeth the document: \"%s\"\n", *inputFile)
 		os.Exit(1)
 	}
@@ -33,8 +33,8 @@ func main() {
 	}
 
 	client := &bitbucket.Client{
-		Username: os.Getenv("BITBUCKET_USERNAME"),
-		Password: os.Getenv("BITBUCKET_PASSWORD"),
+		Username:   os.Getenv("BITBUCKET_USERNAME"),
+		Password:   os.Getenv("BITBUCKET_PASSWORD"),
 		HTTPClient: &http.Client{},
 	}
 

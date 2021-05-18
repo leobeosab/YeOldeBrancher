@@ -18,10 +18,10 @@ type Target struct {
 }
 
 type BranchInput struct {
-	BranchName string `json:"name"`
+	BranchName     string `json:"name"`
 	BaseBranchName string `json:"baseBranchName"`
-	Workspace string `json:"workspace"`
-	Repository string `json:"repository"`
+	Workspace      string `json:"workspace"`
+	Repository     string `json:"repository"`
 }
 
 func branchRead(bi BranchInput, c *Client) (Branch, error) {

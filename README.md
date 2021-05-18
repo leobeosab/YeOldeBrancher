@@ -1,4 +1,4 @@
-# Ye Old Brancher
+# Ye Olde Brancher
 Huzzah fellow peasents! Welcome to this small simple project that will create branches in Bitbucket automatically based on a small jason file.
 
 The general idea is to create an App Password with bitbucket and setup your credentials like so: 
@@ -27,5 +27,5 @@ Create a simple config file example:
 
 Then just run the executable
 ```bash
-yeoldbrancher -branch-list=path/to/json/file
+yeoldebrancher -branch-list=path/to/json/file
 ```
