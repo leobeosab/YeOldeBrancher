@@ -24,7 +24,7 @@ type BranchInput struct {
 	Repository string `json:"repository"`
 }
 
-func resourceBranchRead(bi BranchInput, c *Client) (Branch, error) {
+func branchRead(bi BranchInput, c *Client) (Branch, error) {
 	rbReq, _ := c.Get(fmt.Sprintf("2.0/repositories/%s/%s/refs/branches/%s",
 		bi.Workspace,
 		bi.Repository,
@@ -54,8 +54,8 @@ func resourceBranchRead(bi BranchInput, c *Client) (Branch, error) {
 	return Branch{}, fmt.Errorf("could not process request, status: %d", rbReq.StatusCode)
 }
 
-func resourceBranchCreate(bi BranchInput, c *Client) error {
-	base, err := resourceBranchRead(bi, c)
+func BranchCreate(bi BranchInput, c *Client) error {
+	base, err := branchRead(bi, c)
 	if err != nil {
 		log.Println("Thee hath brought shame upon our version control")
 		log.Println(err)
