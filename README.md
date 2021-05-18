@@ -1,13 +1,13 @@
 # Ye Olde Brancher
-Huzzah fellow peasents! Welcome to this small simple project that will create branches in Bitbucket automatically based on a small jason file.
+Huzzah fellow peasents! Welcome to this small simple project that will create branches in Bitbucket automatically based on a small JSON file.
 
-The general idea is to create an App Password with bitbucket and setup your credentials like so: 
+The general idea is to create an [App Password](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) with bitbucket and setup your credentials like so: 
 ```bash
 export BITBUCKET_USERNAME=some_user
 export BITBUCKET_PASSWORD=yourapppassword # please don't use your actual atlassian password
 ```
 
-Create a simple config file example:
+Create a simple JSON branch file example:
 ```json
 [
   {
@@ -25,7 +25,7 @@ Create a simple config file example:
 ]
 ```
 
-Then just run the executable
+Then just run the executable:
 ```bash
 yeoldebrancher -branch-list=path/to/json/file
 ```
